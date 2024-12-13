@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Showcase</title>
+    <base href="https://www.vixenart.com/">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        header img {
+            height: 50px;
+            width: 50px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .upload-container {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .upload-container input[type="file"] {
+            display: none;
+        }
+        .upload-container label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #6200ea;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .upload-container label:hover {
+            background-color: #3700b3;
+        }
+        footer {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="vixen.PNG" alt="Logo">
+        <h1>My Art Showcase</h1>
+    </header>
+    <main>
+        <div class="upload-container">
+            <label for="file-upload">Upload Your Artwork</label>
+            <input type="file" id="file-upload" accept="image/*">
+        </div>
+        <section class="gallery">
+            <img src="art1.jpg" alt="Cartoon drawing 1">
+            <img src="art2.jpg" alt="Cartoon drawing 2">
+            <img src="art3.jpg" alt="Cartoon drawing 3">
+            <img src="art4.jpg" alt="Cartoon drawing 4">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Art Showcase | Created by Jahnavi.k</p>
+    </footer>
+</body>
+</html>
